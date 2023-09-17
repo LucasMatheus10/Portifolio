@@ -1,3 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: white;
+}
+
+.light {
+  --text-color: black;
+}
+
 body {
   background-image: url(./assets/assets/bg-mobile.jpg);
   background-repeat: no-repeat;
@@ -9,9 +23,82 @@ body {
   */
 }
 
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+}
+
 #container {
   width: 360px;
-  height: 712px;
-  border: 1px solid red;
-  margin: auto;
+  margin: 56px auto 0px;
+  padding: 0 24px;
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+ul li a {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  padding: 16px 24px;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+/* o hover altera quando passa o mouse por cima */
+ul li a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid var(--text-color);
+}
+
+#social-links {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+#social-links a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+  padding: 24px;
+  text-align: center;
+  font-size: 14px;
 }
